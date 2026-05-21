@@ -1,0 +1,100 @@
+<div class="p-6 max-w-7xl mx-auto space-y-6">
+  <div>
+    <h1 class="text-2xl font-bold text-slate-900 tracking-tight">Physiological Vitals Tracker</h1>
+    <p class="text-sm text-slate-500">Biometric telemetry charts tracking continuous clinical trends</p>
+  </div>
+
+  @if (errorMessage()) {
+    <div class="p-4 bg-red-50 border-l-4 border-red-500 rounded text-sm text-red-700 font-medium">
+      {{ errorMessage() }}
+    </div>
+  }
+
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <!-- Entry Log Input Form Panel -->
+    <div class="bg-white p-5 border border-slate-200 rounded-xl shadow-sm h-fit">
+      <h2 class="text-base font-bold text-slate-800 mb-4">Log New Entry</h2>
+      
+      @if (vitalsForm) {
+        <form [formGroup]="vitalsForm" (ngSubmit)="onSubmit()" class="space-y-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-600 mb-1">Blood Pressure (SYS/DIA)</label>
+            <input type="text" formControlName="bloodPressure" placeholder="120/80"
+              class="w-full px-3 py-1.5 text-sm border rounded focus:ring-2 focus:ring-blue-500 outline-none">
+            @if (vitalsForm.get('bloodPressure')?.touched && vitalsForm.get('bloodPressure')?.invalid) {
+              <p class="text-[11px] text-red-500 mt-0.5">Use valid layout structure formatting (e.g. 120/80).</p>
+            }
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-semibold text-slate-600 mb-1">Pulse Rate (BPM)</label>
+              <input type="number" formControlName="heartRate" placeholder="72"
+                class="w-full px-3 py-1.5 text-sm border rounded focus:ring-2 focus:ring-blue-500 outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-600 mb-1">Temp (°C)</label>
+              <input type="number" step="0.1" formControlName="temperature" placeholder="36.6"
+                class="w-full px-3 py-1.5 text-sm border rounded focus:ring-2 focus:ring-blue-500 outline-none">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-600 mb-1">Weight Value (kg)</label>
+            <input type="number" step="0.1" formControlName="weight" placeholder="70"
+              class="w-full px-3 py-1.5 text-sm border rounded focus:ring-2 focus:ring-blue-500 outline-none">
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-600 mb-1">Log Date</label>
+            <input type="date" formControlName="recordedDate"
+              class="w-full px-3 py-1.5 text-sm border rounded focus:ring-2 focus:ring-blue-500 outline-none">
+          </div>
+
+          <button type="submit" [disabled]="isSubmitting()"
+            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs py-2 rounded shadow transition-all disabled:opacity-50">
+            {{ isSubmitting() ? 'Pushing metrics...' : 'Commit Metrics Set' }}
+          </button>
+        </form>
+      }
+    </div>
+
+    <!-- Chronological Read History Output Matrix -->
+    <div class="lg:col-span-2 space-y-3">
+      <h2 class="text-base font-bold text-slate-800">Timeline Metrics Stream</h2>
+
+      @if (isLoading()) {
+        <div class="flex justify-center py-12"><div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>
+      } @else {
+        <div class="space-y-2.5">
+          @for (vital of vitalsList(); track vital.vitalsId) {
+            <div class="bg-white p-4 border border-slate-100 rounded-lg shadow-sm grid grid-cols-2 md:grid-cols-5 gap-3 items-center">
+              <div>
+                <span class="block text-[10px] uppercase tracking-wider text-slate-400 font-bold">Captured</span>
+                <span class="text-xs font-semibold text-slate-800">{{ vital.recordedDate | date:'mediumDate' }}</span>
+              </div>
+              <div>
+                <span class="block text-[10px] text-slate-400">BP String</span>
+                <span class="text-sm font-bold text-slate-900">{{ vital.bloodPressure }} <span class="text-[10px] font-normal text-slate-400">mmHg</span></span>
+              </div>
+              <div>
+                <span class="block text-[10px] text-slate-400">Heart Rate</span>
+                <span class="text-sm font-bold text-emerald-600">{{ vital.heartRate }} <span class="text-[10px] font-normal text-slate-400">bpm</span></span>
+              </div>
+              <div>
+                <span class="block text-[10px] text-slate-400">Temperature</span>
+                <span class="text-sm font-bold text-orange-600">{{ vital.temperature }} °C</span>
+              </div>
+              <div>
+                <span class="block text-[10px] text-slate-400">Mass Core</span>
+                <span class="text-sm font-bold text-slate-700">{{ vital.weight }} kg</span>
+              </div>
+            </div>
+          } @empty {
+            <div class="bg-white border border-dashed text-center p-8 text-slate-400 text-sm rounded-xl">No historical metric data tracks pinned to this subject folder profile yet.</div>
+          }
+        </div>
+      }
+    </div>
+  </div>
+</div>

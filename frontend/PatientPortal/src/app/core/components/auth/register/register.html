@@ -1,0 +1,71 @@
+<div class="min-h-screen flex items-center justify-center bg-slate-50 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-md w-full space-y-8 bg-white p-8 rounded-xl shadow-lg border border-slate-100">
+    <div>
+      <h2 class="text-center text-3xl font-extrabold text-slate-900 tracking-tight">Create Portal Account</h2>
+      <p class="mt-2 text-center text-sm text-slate-600">Register identity details for portal credentials</p>
+    </div>
+
+    @if (errorMessage()) {
+      <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded-md" role="alert">
+        <p class="text-sm text-red-700 font-medium">{{ errorMessage() }}</p>
+      </div>
+    }
+
+    @if (successMessage()) {
+      <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-md" role="alert">
+        <p class="text-sm text-green-700 font-medium">{{ successMessage() }}</p>
+      </div>
+    }
+
+    <form class="mt-8 space-y-5" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div class="space-y-4">
+        <div>
+          <label for="name" class="block text-sm font-semibold text-slate-700 mb-1">Full Identity Name</label>
+          <input id="name" type="text" formControlName="name"
+            class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            [ngClass]="{'border-red-500': registerForm.get('name')?.touched && registerForm.get('name')?.invalid}"
+            placeholder="John Doe">
+        </div>
+
+        <div>
+          <label for="email" class="block text-sm font-semibold text-slate-700 mb-1">Email Address</label>
+          <input id="email" type="email" formControlName="email"
+            class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            [ngClass]="{'border-red-500': registerForm.get('email')?.touched && registerForm.get('email')?.invalid}">
+        </div>
+
+        <div>
+          <label for="passwordHash" class="block text-sm font-semibold text-slate-700 mb-1">Security Password</label>
+          <input id="passwordHash" type="password" formControlName="passwordHash"
+            class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            [ngClass]="{'border-red-500': registerForm.get('passwordHash')?.touched && registerForm.get('passwordHash')?.invalid}">
+        </div>
+
+        <div>
+          <label for="role" class="block text-sm font-semibold text-slate-700 mb-1">Portal Account Role</label>
+          <select id="role" formControlName="role"
+            class="w-full px-3 py-2 border border-slate-300 bg-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="Patient">Patient</option>
+            <option value="Nurse">Nurse</option>
+            <option value="Doctor">Doctor</option>
+            <option value="Admin">Admin</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit" [disabled]="isLoading()"
+        class="w-full flex justify-center py-2.5 px-4 border border-transparent text-sm font-semibold rounded-md text-white bg-blue-600 hover:bg-blue-700 disabled:opacity-50 transition-all">
+        @if (isLoading()) {
+          Processing...
+        } @else {
+          Complete Registration
+        }
+      </button>
+
+      <div class="text-center text-sm">
+        <span class="text-slate-600">Already registered? </span>
+        <a routerLink="/login" class="font-semibold text-blue-600 hover:text-blue-500 underline">Sign In instead</a>
+      </div>
+    </form>
+  </div>
+</div>

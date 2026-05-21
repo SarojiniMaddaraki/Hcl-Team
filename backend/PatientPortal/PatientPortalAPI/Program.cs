@@ -7,6 +7,16 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AngularPortalPolicy", policy =>
+    {
+        policy.WithOrigins("http://localhost:4200") // Matches your frontend port
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
 builder.Services.AddControllers();
 
 // Swagger / OpenAPI
@@ -44,6 +54,8 @@ builder.Services.AddScoped<PatientPortalAPI.Services.Interfaces.IInvoiceService,
 
 var app = builder.Build();
 
+app.UseHttpsRedirection();
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -52,10 +64,12 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
-app.UseHttpsRedirection();
 
+
+// 2. Use CORS middleware before routing/auth middlewares
+app.UseCors("AngularPortalPolicy");
+
+app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();
