@@ -1,4 +1,5 @@
-﻿namespace PatientPortalAPI.Models
+﻿using System.Text.Json.Serialization;
+namespace PatientPortalAPI.Models
 {
     public class Invoice
     {
@@ -13,6 +14,7 @@
         public DateTime GeneratedDate { get; set; }
 
         // Navigation Property
-        public Patient Patient { get; set; }
+        [JsonIgnore]
+        public Patient? Patient { get; set; }
     }
 }

@@ -1,7 +1,10 @@
-﻿namespace PatientPortalAPI.Models
+﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
+namespace PatientPortalAPI.Models
 {
     public class Vitals
     {
+        [Key]
         public int VitalID { get; set; }
 
         public int PatientID { get; set; }
@@ -17,8 +20,10 @@
         public DateTime RecordedAt { get; set; }
 
         // Navigation Properties
-        public Patient Patient { get; set; }
+        [JsonIgnore]
+        public Patient? Patient { get; set; }
 
-        public User Nurse { get; set; }
+        [JsonIgnore]
+        public User? Nurse { get; set; }
     }
 }

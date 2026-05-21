@@ -1,7 +1,10 @@
-﻿namespace PatientPortalAPI.Models
+﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
+namespace PatientPortalAPI.Models
 {
     public class LabResult
     {
+        [Key]
         public int LabID { get; set; }
 
         public int PatientID { get; set; }
@@ -12,7 +15,7 @@
 
         public DateTime TestDate { get; set; }
 
-        // Navigation Property
-        public Patient Patient { get; set; }
+        [JsonIgnore]
+        public Patient? Patient { get; set; }
     }
 }

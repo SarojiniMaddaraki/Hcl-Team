@@ -1,8 +1,13 @@
-﻿namespace PatientPortalAPI.Models
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
+namespace PatientPortalAPI.Models
 {
     public class Prescription
     {
+        [Key]
         public int PrescriptionID { get; set; }
+
 
         public int RecordID { get; set; }
 
@@ -13,8 +18,12 @@
         public string Dosage { get; set; }
 
         // Navigation Properties
-        public MedicalRecord MedicalRecord { get; set; }
+        [ForeignKey("RecordID")]
+        [JsonIgnore]
+        public MedicalRecord? MedicalRecord { get; set; }
 
-        public User Doctor { get; set; }
+        [ForeignKey("DoctorID")]
+        [JsonIgnore]
+        public User? Doctor { get; set; }
     }
 }
