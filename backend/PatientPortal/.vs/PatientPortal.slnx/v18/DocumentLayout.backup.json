@@ -1,7 +1,40 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\HCL hackthons\\Hcl-Team\\backend\\PatientPortal\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{88D90A7F-8F8F-E6CD-A151-B879AC63A986}|PatientPortalAPI\\PatientPortalAPI.csproj|d:\\hcl hackthons\\hcl-team\\backend\\patientportal\\patientportalapi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88D90A7F-8F8F-E6CD-A151-B879AC63A986}|PatientPortalAPI\\PatientPortalAPI.csproj|solutionrelative:patientportalapi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88D90A7F-8F8F-E6CD-A151-B879AC63A986}|PatientPortalAPI\\PatientPortalAPI.csproj|d:\\hcl hackthons\\hcl-team\\backend\\patientportal\\patientportalapi\\models\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88D90A7F-8F8F-E6CD-A151-B879AC63A986}|PatientPortalAPI\\PatientPortalAPI.csproj|solutionrelative:patientportalapi\\models\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88D90A7F-8F8F-E6CD-A151-B879AC63A986}|PatientPortalAPI\\PatientPortalAPI.csproj|d:\\hcl hackthons\\hcl-team\\backend\\patientportal\\patientportalapi\\models\\vitals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88D90A7F-8F8F-E6CD-A151-B879AC63A986}|PatientPortalAPI\\PatientPortalAPI.csproj|solutionrelative:patientportalapi\\models\\vitals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88D90A7F-8F8F-E6CD-A151-B879AC63A986}|PatientPortalAPI\\PatientPortalAPI.csproj|d:\\hcl hackthons\\hcl-team\\backend\\patientportal\\patientportalapi\\models\\labresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88D90A7F-8F8F-E6CD-A151-B879AC63A986}|PatientPortalAPI\\PatientPortalAPI.csproj|solutionrelative:patientportalapi\\models\\labresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88D90A7F-8F8F-E6CD-A151-B879AC63A986}|PatientPortalAPI\\PatientPortalAPI.csproj|d:\\hcl hackthons\\hcl-team\\backend\\patientportal\\patientportalapi\\models\\prescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88D90A7F-8F8F-E6CD-A151-B879AC63A986}|PatientPortalAPI\\PatientPortalAPI.csproj|solutionrelative:patientportalapi\\models\\prescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88D90A7F-8F8F-E6CD-A151-B879AC63A986}|PatientPortalAPI\\PatientPortalAPI.csproj|d:\\hcl hackthons\\hcl-team\\backend\\patientportal\\patientportalapi\\models\\medicalrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88D90A7F-8F8F-E6CD-A151-B879AC63A986}|PatientPortalAPI\\PatientPortalAPI.csproj|solutionrelative:patientportalapi\\models\\medicalrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88D90A7F-8F8F-E6CD-A151-B879AC63A986}|PatientPortalAPI\\PatientPortalAPI.csproj|d:\\hcl hackthons\\hcl-team\\backend\\patientportal\\patientportalapi\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88D90A7F-8F8F-E6CD-A151-B879AC63A986}|PatientPortalAPI\\PatientPortalAPI.csproj|solutionrelative:patientportalapi\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88D90A7F-8F8F-E6CD-A151-B879AC63A986}|PatientPortalAPI\\PatientPortalAPI.csproj|d:\\hcl hackthons\\hcl-team\\backend\\patientportal\\patientportalapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88D90A7F-8F8F-E6CD-A151-B879AC63A986}|PatientPortalAPI\\PatientPortalAPI.csproj|solutionrelative:patientportalapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +55,110 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\HCL hackthons\\Hcl-Team\\backend\\PatientPortal\\PatientPortalAPI\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "PatientPortalAPI\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\HCL hackthons\\Hcl-Team\\backend\\PatientPortal\\PatientPortalAPI\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "PatientPortalAPI\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T12:11:20.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Invoice.cs",
+              "DocumentMoniker": "D:\\HCL hackthons\\Hcl-Team\\backend\\PatientPortal\\PatientPortalAPI\\Models\\Invoice.cs",
+              "RelativeDocumentMoniker": "PatientPortalAPI\\Models\\Invoice.cs",
+              "ToolTip": "D:\\HCL hackthons\\Hcl-Team\\backend\\PatientPortal\\PatientPortalAPI\\Models\\Invoice.cs",
+              "RelativeToolTip": "PatientPortalAPI\\Models\\Invoice.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T12:10:37.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Vitals.cs",
+              "DocumentMoniker": "D:\\HCL hackthons\\Hcl-Team\\backend\\PatientPortal\\PatientPortalAPI\\Models\\Vitals.cs",
+              "RelativeDocumentMoniker": "PatientPortalAPI\\Models\\Vitals.cs",
+              "ToolTip": "D:\\HCL hackthons\\Hcl-Team\\backend\\PatientPortal\\PatientPortalAPI\\Models\\Vitals.cs",
+              "RelativeToolTip": "PatientPortalAPI\\Models\\Vitals.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T12:09:51.441Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LabResult.cs",
+              "DocumentMoniker": "D:\\HCL hackthons\\Hcl-Team\\backend\\PatientPortal\\PatientPortalAPI\\Models\\LabResult.cs",
+              "RelativeDocumentMoniker": "PatientPortalAPI\\Models\\LabResult.cs",
+              "ToolTip": "D:\\HCL hackthons\\Hcl-Team\\backend\\PatientPortal\\PatientPortalAPI\\Models\\LabResult.cs",
+              "RelativeToolTip": "PatientPortalAPI\\Models\\LabResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T12:09:23.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Prescription.cs",
+              "DocumentMoniker": "D:\\HCL hackthons\\Hcl-Team\\backend\\PatientPortal\\PatientPortalAPI\\Models\\Prescription.cs",
+              "RelativeDocumentMoniker": "PatientPortalAPI\\Models\\Prescription.cs",
+              "ToolTip": "D:\\HCL hackthons\\Hcl-Team\\backend\\PatientPortal\\PatientPortalAPI\\Models\\Prescription.cs",
+              "RelativeToolTip": "PatientPortalAPI\\Models\\Prescription.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T12:08:47.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MedicalRecord.cs",
+              "DocumentMoniker": "D:\\HCL hackthons\\Hcl-Team\\backend\\PatientPortal\\PatientPortalAPI\\Models\\MedicalRecord.cs",
+              "RelativeDocumentMoniker": "PatientPortalAPI\\Models\\MedicalRecord.cs",
+              "ToolTip": "D:\\HCL hackthons\\Hcl-Team\\backend\\PatientPortal\\PatientPortalAPI\\Models\\MedicalRecord.cs",
+              "RelativeToolTip": "PatientPortalAPI\\Models\\MedicalRecord.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA1wBIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T12:08:10.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Patient.cs",
+              "DocumentMoniker": "D:\\HCL hackthons\\Hcl-Team\\backend\\PatientPortal\\PatientPortalAPI\\Models\\Patient.cs",
+              "RelativeDocumentMoniker": "PatientPortalAPI\\Models\\Patient.cs",
+              "ToolTip": "D:\\HCL hackthons\\Hcl-Team\\backend\\PatientPortal\\PatientPortalAPI\\Models\\Patient.cs",
+              "RelativeToolTip": "PatientPortalAPI\\Models\\Patient.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA7wBoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T12:07:28.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\HCL hackthons\\Hcl-Team\\backend\\PatientPortal\\PatientPortalAPI\\Models\\User.cs",
+              "RelativeDocumentMoniker": "PatientPortalAPI\\Models\\User.cs",
+              "ToolTip": "D:\\HCL hackthons\\Hcl-Team\\backend\\PatientPortal\\PatientPortalAPI\\Models\\User.cs",
+              "RelativeToolTip": "PatientPortalAPI\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T12:04:30.219Z",
+              "EditorCaption": ""
             }
           ]
         }
